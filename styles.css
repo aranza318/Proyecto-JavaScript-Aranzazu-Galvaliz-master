@@ -1,0 +1,542 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2000px, 200px;
+    grid-template-areas: "main"
+                         "footer";
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    
+}
+@media screen and (max-width:600px) {
+.respmenu a {
+    margin-top: 10%;
+    font-size: 16px;
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 2px;
+    max-width: 200px;
+    background: rgb(35, 35, 130);
+    font-variant:normal;
+    text-shadow: 1px 1px 2px rgb(35, 35, 130);
+}
+.respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position:absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 15%;
+    top: 0;
+    width: 45px;
+    height: 45px;
+}
+  
+.respmenu .fa-bars, .respmenu .fa-times {
+    font-size: 45px;
+    pointer-events: none;
+}
+  
+.respmenu input[type="checkbox"] {
+    opacity: 0;
+}
+  
+.respmenu {
+    color: white;
+    position: relative;
+    background: transparent;
+    margin-top: 10%;
+    min-height: 48px;
+    text-decoration: none;
+}
+  
+.respmenu nav {
+    display: none;
+
+
+}
+.navegacion {
+    display: flex;
+    flex-direction: column;
+}
+  
+.respmenu input:checked ~ nav {
+    display: block;
+}
+  
+.respmenu input:checked ~ .fa-bars {
+    display: none;
+}
+  
+.respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+}
+}
+.sidebar {
+    height: 100%;
+    width: 25%;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.479);
+    grid-area: header;
+    flex-flow: row;
+    justify-content: center;
+   
+}
+.cabecera {
+    box-shadow: 1px 1px 10px whitesmoke;
+    background: linear-gradient(180deg,rgba(11, 10, 94, 0.53), rgba(0,0,0));
+    grid-area: header;
+    width: fit-content;
+    height: 100vh;
+    position:fixed;
+    top:0px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img"
+                         "nav";
+}
+.imgL {
+    margin-top: 5%;
+    margin-left: 25%;
+    grid-area: img;
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    height: 700px;
+}
+.navegacion {
+    grid-area: nav;
+    justify-content: space-between;
+    display: flex;
+    width: 200px;
+    height: 100vh;
+    padding: 1em;
+    display: flex;
+    flex-flow: row;
+}
+
+@media  screen and (min-width:601px) {
+    .checkbox {
+        visibility: hidden;
+    }
+    .fa-bars{
+        visibility: hidden;
+    }
+    .fa-times {
+        visibility: hidden;
+    }
+    .link {
+        justify-content: space-between;
+        display: flex;
+        flex-flow: nowrap;
+        flex-direction: row;
+    }
+    a {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:601px) {
+    body{
+        overflow-x: hidden;
+    }
+    ul {
+        font-size:  16px;
+        background-color: transparent;
+        margin-top: 100%;
+        justify-content: space-evenly;
+
+    }
+    li {
+        margin-top: 40%;
+        padding-top: 30%;
+    }
+    .link {
+        margin-top: 5%;
+        
+    }
+    .cabecera {
+        display: grid;
+        grid-template-columns: 90px;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "img"
+                             "nav"
+                             "nav";
+    }
+    main {
+        height: fit-content;
+        width:fit-content;
+        padding-inline-start: 33%;
+        margin-left: 20%;
+    }
+    .imgL {
+        margin: 3%;
+        max-width: 80px;
+        max-height: 80px;
+    }
+    .texto1{
+        font-size: 16px;
+        padding-right: 90%;
+        padding-left: 18%;
+        text-align:center;
+        text-shadow: 1px 1px 1px rgb(26, 26, 234);
+    }
+    .contenedor-2{
+        margin-bottom: 240%;
+    }
+    .letra{
+        font-size: 16px;
+        text-align: center;
+    }
+    #resultado {
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .row{
+        align-self: start;
+        justify-content: space-evenly;
+    }
+    .texto2{
+        padding-right: 16%;
+        padding-left: -20%;
+        
+    }
+    .btninsta {
+        height: 50px;
+        padding: 2%;
+    }
+    .contenedor-3{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 400%;
+    }
+    .texto {
+        display: flex;
+        flex-direction: column; 
+    }
+    #main-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .caja {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #btn{
+        margin-top: 10%;
+        margin-left: 40%;
+    }
+    .resultado {
+        display: flex;
+        flex-direction: row;
+    }
+    .texto2{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 50%;
+    }
+    #modal-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor-4{
+        display: flex;
+        flex-direction: column;
+        margin-top: 120%;
+    }
+    .mariposa{
+        margin-left: 65px;
+    }
+    #redes{
+        display: flex;
+        flex-direction: column;
+        margin-right: 10%;
+        justify-content: space-around;
+    }
+    .texto4{
+        padding-right: 20%;
+        padding-left: 2%;
+    }
+    .insta{
+        margin: 2%;
+    }
+    .wtsp{
+        margin: 2%;
+    }
+    footer{
+        font-size: small;
+        padding-left: 13%;
+        text-align: center;
+    }
+}
+a {
+    display: flex;
+    margin: l;
+}
+.ul {
+    display: block;
+    flex-flow: column;
+    list-style-type: none;
+}
+.respmenu {
+    display: flex;
+    flex-flow: row;
+}
+.link {
+    text-decoration: none;
+    color: aliceblue;
+    justify-self: unset;
+    padding: 20px;
+}
+.link:hover {
+    color: rgba(13, 13, 154, 0.87);
+    box-shadow: 1px 0 10px white;
+    background-color: aliceblue;
+    border-radius: 10%;
+}
+.main {
+    grid-area: main;
+    width: 80%;
+    margin-left: 20%;
+}
+.contenedor-1{
+    width: 100%;
+    height: 100vh;
+    background-position:center;
+    background-image: url(img/fotor_2023-2-5_15_54_11.jpg);
+}
+.texto1 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 13%;
+    margin-left: 7%;
+    color: aliceblue;
+    height: 200px;
+    width: 200px;
+    font-size: 17px;
+    align-items: center;
+}
+.texto1a {
+    margin-left: 9%;
+}
+.parrafo1 {
+    padding-top: 12%;
+    margin-left: 7%;
+}
+.boton {
+    text-decoration: none;
+    color: white;
+    margin-top: 17%;
+    margin-left: 7%;
+    width: fit-content;
+}
+.boton:hover {
+    color: rgba(13, 13, 154, 0.87);
+    box-shadow: 1px 0 10px white;
+    background-color: aliceblue;
+    border-radius: 13%;
+}
+.contenedor-2 {
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.texto2 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7%;
+    margin-left: 7%;
+    color: aliceblue;
+    height: 200px;
+    width: 90%;
+    font-size: 17px;
+    align-items: center;
+    text-align: center;
+}
+.imagenes {
+    height: fit-content;
+    width: 180px;
+    border-radius: 10%;
+    margin: 72px;
+}
+.img {
+    border-radius: 30%;
+    box-shadow: 4px -4px 15px 0px white, 12px -11px 7px 0px whitesmoke, 20px -5px 7px 0px beige, 20px 6px 7px 0px bisque, 13px 12px 17px 0px blanchedalmond, 2px 17px 17px 0px blue, -9px 21px 18px 0px rgb(105, 105, 209), -9px 6px 11px 0px rgb(58, 58, 214), -11px -9px 11px 0px rgb(35, 35, 130), -11px -9px 11px 0px rgba(13, 13, 154, 0.87), 5px 5px 15px 5px rgba(0,0,0,0); ;
+}
+.colortexto{
+    color: rgb(9, 13, 16);
+    text-align: center; 
+}
+.fotos{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+.instagram {
+    color: aliceblue;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btninsta {
+    background-color: black;
+    border-style: none;
+}
+.btninsta:hover {
+   box-shadow: 1px 1px 3px 3px aliceblue;
+}
+.contenedor-3{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    justify-content: space-evenly;
+}
+.main-box{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 1%;
+}
+.texto3{
+    color:aliceblue;
+    margin-bottom: 15%;
+    text-align: center;
+}
+.card {
+    border-radius: 10%;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    margin: 2%;
+}
+.card:hover{
+    box-shadow:1px 3px 2px 2px aliceblue;
+}
+.botones{
+    margin-top:4%;
+    background-color: transparent;
+    color: aliceblue;
+    height: fit-content;
+    width: 120px;
+    border-radius: 10%;
+    border-color: transparent;
+}
+.botoncito {
+    margin-left: 49%;
+    margin-right: 48%;
+    margin-top: 3%;
+    display: flex;
+    text-align: center;
+    font-size: x-large;
+    background-color: transparent;
+    color: aliceblue;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10%;
+    border-color: transparent;
+}
+.botoncito:hover{
+    box-shadow:1px 3px 2px 2px aliceblue;
+}
+.contenedorFinal {
+    display: flex;
+    flex-direction: row;
+}
+.modal-container {
+    width: 50%;
+    justify-content: space-between;
+}
+.resultado {
+    width: 50%;
+    margin: 5%;
+    text-align: center;
+    color: aliceblue;
+}
+.container{
+    color: aliceblue;
+}
+.colorwhite {
+    color: antiquewhite;
+}
+.contenedor-4{
+    display: flex;
+    flex-direction: row;
+}
+.texto4 {
+    width: 300px;
+    margin: 10%;
+    align-items: center;
+    text-align: center;
+}
+.contact {
+    color: aliceblue;
+    font-size: x-large;
+    margin: 10%;
+}
+.texto4a{
+    color: aliceblue;
+    line-height: 30px;
+    margin-bottom: 10%;
+    padding: auto;
+}
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+.mariposa {
+    width: 500px;
+    height: fit-content;
+    padding: 0%;
+}
+
+footer {
+    grid-area: footer;
+    color: aliceblue;
+    justify-content: center;
+    margin-left:40%;
+    margin-bottom: 3%;
+}
